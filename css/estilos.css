@@ -1,0 +1,99 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.contenedor{
+    display:flex;
+    flex-flow: column nowrap;
+}
+    .header{
+    background: #000;
+    display: flex;
+    flex-flow: column nowrap;
+    }
+        .menu{
+        background: #F9F9F9;
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100px;
+        align-items: center;
+        }
+            .logo{
+                background: #EBCBAE;
+                flex: 1 1 auto;
+                height: 30px;
+            }
+            .nav{
+                background: #EBCBAE;
+                flex: 5 1 auto;
+                height: 30px;
+            }
+            .social{
+                background: #EBCBAE;
+                flex: 1 1 auto;
+                height: 30px;
+            }
+        .texto-principal{
+        background: #8F8787;
+        }
+        h1{
+            background: #7FA99B;
+        }
+    .section{
+    background: #000;
+    display: flex;
+    }
+        .articulos{
+             background: #404B69;
+             flex: 2 1 auto;
+             display: flex;
+             flex-flow: row wrap;
+         }
+            .article{
+                background: #2980B9;
+                flex: 1 1 40%;
+            }
+            .navegacion{
+                background: #6A99CB;
+                flex:  1 1 100%;
+            }
+        .aside{
+            background: #C06C84;
+            flex: 1 1 auto;
+        }
+            .publicidad{
+                background: #F8B195;
+            }
+    .footer{
+    background: #000;
+    display: flex;
+    justify-content: center;
+    }
+        .pie{
+            background: #FF6D24;
+            width: 300px;
+        }
+@media all and (max-width:800px){
+    .section{
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+    .aside{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media all and(max-width:600px){
+    .articulos{
+        flex-direction: column;
+    }  
+}
+@media all and (max-width:400px){
+    .aside{
+        flex-direction: column;
+    }
+}
