@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     
 }
@@ -13,6 +13,9 @@ a{
 .contenedor{
     display:flex;
     flex-flow: column nowrap;
+}
+.margen-interno{
+	padding: 0 50px;
 }
     .header{
     background:url(../img/logo1.jpg);
@@ -41,7 +44,7 @@ a{
                     
             }
                  .logo a{
-                   color: #fff;
+                   color: #000;
                   font-size: 30px;
             }
             .nav{
@@ -50,7 +53,7 @@ a{
                 
             }
                 .nav a{
-                    color:#fff;
+                    color:#000;
                     font-size: 11px;
                     text-transform: uppercase;
                     padding: 0 10px;
@@ -68,53 +71,117 @@ a{
             }
                 .social a{
                     font-size:18px;
-                    color:#fff;
+                    color:#000;
                     padding: 0 5px;
                 }
                 .social a:hover{
                     color:#343434;
                 }
         .texto-principal{
-        background: #8F8787;
+            height: 580px;
+            display: flex;
+            align-items: center;
         }
         h1{
-            background: #7FA99B;
+          
+            font-family: 'lora',serif;
+            font-size: 21px;
+            color: #fff;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.6;
         }
+
     .section{
-    background: #000;
+    background: #fff;
     display: flex;
     }
         .articulos{
-             background: #404B69;
+             background: #fff;
              flex: 2 1 auto;
              display: flex;
              flex-flow: row wrap;
          }
             .article{
-                background: #2980B9;
+               
                 flex: 1 1 40%;
+                color: #000;
+                font-size: 13px;
+                letter-spacing: 1px;
+                margin: 10px 10px 0 0px;
+				flex: 1 1 45%;
+				background: #ececec;
             }
+            .article img{
+                width: 100%;
+            }
+            .article a{
+                color: #fff;
+                font-size: 13px;
+                padding: 10px;
+                background: #000;
+                margin: 10px 0;
+                display: inline-block;
+            }
+            .article a:hover{
+                background: #546cc3;
+            }
+            h3{
+				color: #000;
+				font-size: 13px;
+				padding: 10px 0;
+				margin-top: -80px;
+			}
+			h2{
+				font-size: 25px;
+				text-transform: uppercase;
+				padding: 0px 0 10px 0;
+				color: #000;
+			}
             .navegacion{
-                background: #6A99CB;
+               background:#fff;
                 flex:  1 1 100%;
+                margin: 10px 10px 0 0px;
+            }
+            .navegacion a{
+                color: #000;
+                font-size: 11px;
+                text-transform: uppercase;
+                padding: 0 10px;
+                letter-spacing: 2px;
             }
         .aside{
-            background: #C06C84;
+           
             flex: 1 1 auto;
+            margin:  10px 5px 10px 0;
         }
+            h4{
+                background: #000;
+                color: #fff;
+                padding: 10px;
+                text-transform: uppercase;
+            }
             .publicidad{
-                background: #F8B195;
+                
             }
     .footer{
     background: #000;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
     }
         .pie{
-            background: #FF6D24;
-            width: 300px;
+            
+           text-align: center;
         }
-@media all and (max-width:800px){
+        .pie a{
+            color:#fff;
+            font-size: 11px;
+            text-transform: uppercase;
+            padding: 0 10px;
+            letter-spacing: 2px;
+        }
+@media all and (max-width:1024px){
     .section{
         flex-direction: column;
     }
@@ -126,13 +193,22 @@ a{
         display: flex;
         justify-content: center;
     }
+    h1{
+        font-size: 15px;
+    }
+    .texto-principal{
+        height: 450px;
+    }
 }
-@media all and(max-width:600px){
+@media all and (max-width:760px){
     .articulos{
         flex-direction: column;
     }  
 }
-@media all and (max-width:400px){
+@media all and (max-width:650px){
+    .off{ display: none; }
+    .nav a{font-size: 25px;}
+@media all and (max-width:480px){
     .aside{
         flex-direction: column;
     }
