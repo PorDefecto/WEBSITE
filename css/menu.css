@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.menu{
+	display: flex;
+	flex: 1 1 50%;
+	flex-flow: row-reverse;
+	height: 50px;
+	margin-top: 5%;
+
+}
+.menu li {
+	margin: 10px;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
