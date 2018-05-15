@@ -1,0 +1,42 @@
+.contactar{
+	width: 100%;
+	height: 600px;
+	padding: 60px;
+	background:white;
+}
+
+
+.formulario{
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+}
+.formulario .nombre-contacto, .formulario .nombre-correo,.formulario .mensaje{
+	display: inline-block;
+	padding: 15px 20px;
+	margin-bottom: 20px;
+	background: none;
+	border: 1px solid #999999;
+	border-radius: 3px;
+}
+.mensaje{
+	min-width: 100%;
+	max-width: 1005;
+	min-height: 150px;
+	max-height: 150px;
+}
+.formulario .derecha{
+	display: flex;
+	justify-content: flex-end;
+}
+.formulario .boton-envio{
+	display: inline-block;
+	padding: 10px 20px;
+	background: none;
+	border: 1px solid #15a4fa;
+	border-radius: 3px;
+}
+.formulario .boton-envio:hover{
+	background: #15a4fa;
+	color: #fff;
+}

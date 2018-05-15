@@ -1,0 +1,14 @@
+footer{
+	margin-top: 20px;
+	background: #20AACC;
+}
+.metodopago{
+	display: block;
+	margin:0;
+	width: 100%;
+}
+.politicas a, h4{
+	text-decoration: none;
+	text-align: center;
+	color:#fff;
+}

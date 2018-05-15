@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+.contenedortextoacerca{
+	text-align: center;
+	margin-top: 40px;
+}
+.tituloacerca{
+	color: #ACE83C;
+	font-family: 'Fjalla One', sans-serif;
+}
+.titulocomenzar{
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 50px;
+	color: #5BC5E1;
+	font-weight: 900;
+
+}
+.seguir{
+	font-family: 'Fjalla One', sans-serif;
+	color: #5BC5E1;
+}
+.pasos{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	justify-content: center;
+	margin-bottom: 200px;
+
+}
+.pasos2{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	justify-content: center;
+	margin-bottom: 200px;
+}
+.pasos2 .seguir{
+	width: 40%;
+}
+.pasos .seguir{
+	width: 40%;
+}
+.pasos2 .seguir h2{
+	text-align: center;
+	font-size: 50px;
+}
+.pasos .seguir h2 ,h5{
+	text-align: center;
+}
+.icono1{
+	margin-left: 25%;
+}
+.icono2{
+	margin-left: 30%;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+}
+main .iconos{
+	padding: 30px 0;
+	margin-bottom: 150px;
+}
+.contenedor-iconos{
+
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	flex-flow: wrap;
+}
+.contenedor-iconos .iconoindividual{
+	width: 33%;
+	margin: 20px 0;
+
+}
+
+.contenedor-iconos .iconoindividual h3{
+	margin: 10px 0;
+	color: #90918C;
+	font-size: 15px;
+	font-style: oblique;
+}
