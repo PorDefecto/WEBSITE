@@ -47,7 +47,7 @@ header{
 	font-size: 1em;
 }
 .menu .logo:hover{
-	background: #4357ad;
+	background: rgb(13,186,240);
 }
 .menu .enlaces{
 	display: inline-block;
