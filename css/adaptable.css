@@ -1,8 +1,0 @@
-@media screen and (max-width:620px){
-	header .contenedortextoacerca .tituloacerca{
-		font-size: 40px;
-	}
-	.contenedor-iconos{
-		flex-direction: column;
-	}
-}

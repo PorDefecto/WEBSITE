@@ -1,0 +1,24 @@
+.bannerad{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.TextBanner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.Contad{
+    width: 80%;
+    display: flex;
+	margin: auto;
+    flex-direction: column;
+}
+.Contad li{
+    margin-left: 15px;
+}
+.textn{
+    font-weight:bold;
+}

@@ -1,11 +1,11 @@
 footer{
 	margin-top: 20px;
-	background: #20AACC;
+	background: rgb(13,186,240);
 }
 .metodopago{
 	display: block;
-	margin:0;
-	width: 100%;
+	margin-left:10%;
+	width: 80%;
 }
 .politicas a, h4{
 	text-decoration: none;

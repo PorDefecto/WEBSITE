@@ -10,7 +10,7 @@ body{
 	padding-top: 54px;
 }
 header{
-	background: rgb(13,186,240);
+	background: rgb(13,186,240);	
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -61,7 +61,6 @@ header{
 	text-align: center;
 	font-size: 1em;
 }
-
 .menu .enlaces i{
 	margin-right: 5px;
 }
@@ -69,7 +68,7 @@ header{
 	background: #f2f2f2;
 	color:#4357ad;
 }
-/*main{
+main{
 	width: 90%;
 	max-width: 1000px;
 	margin:20px auto;
