@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background-color:#2DABE8;
+}
+#registro{
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:100px;
+	width:25%;
+}
+#registro h1{
+	font-family:Century Gothic;
+	font-size:30px;
+	margin-bottom:20px;
+	color:#FFF;
+}
+#registro img{
+	margin-bottom:20px;
+	border-radius:110px;
+}
+#registro form input{
+	margin-top:10px;
+	border-radius:2px;
+	height:50px;
+	width:250px;
+	font-family:Century Gothic;
+}
+#registro input[type=text]{
+	padding-left:10px;
+}
+#registro input[type=text]:hover{
+	border:solid #000 2px;
+}
+#registro input[type=text]:focus{
+	border:solid #2DABE8 2px;
+}
+
+#registro input[type=password]{
+	padding-left:10px;
+}
+#registro input[type=password]:hover{
+	border:solid #000 2px;
+}
+#registro input[type=password]:focus{
+	border:solid #2DABE8 2px;
+}
+#registro input[type=checkbox]{
+	width:15px;
+	height:15px;
+}
+#registro input[type=submit]{
+	margin-top:20px;
+	height:50px;
+	width:120px;
+	font-size:15px;
+	font-weight:bold;
+	border-radius:5px;
+}
+#registro input[type=submit]:hover{
+	color:#FFF;
+	background-color:#CCC;
+}
+#registro h5{
+	font-size:20px;
+	color:#666;
+	font-family:Century Gothic;
+	margin-bottom:5px;
+}
+#registro a h5{
+	font-size:20px;
+	color:#CCC;
+	font-family:Century Gothic;
+	text-decoration:underline;
+}
+#registro a h5:hover{
+	color:#FFF;
+}
+#registro a h3{
+	font-size:12px;
+	color:#CCC;
+	font-family:Century Gothic;
+	margin-top:20px;
+}
+#registro a h3:hover{
+	color:#FFF;
+}
+.fa-user{
+	position: absolute;
+	padding-bottom: 80px;
+}
