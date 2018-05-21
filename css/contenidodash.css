@@ -1,0 +1,70 @@
+.main-content{
+    padding-left: 230px;
+}
+.bannersga {
+    display: flex;
+    padding-top: 50px;
+    height: 100%;
+    overflow: scroll;
+    justify-content: space-around;
+    width: auto;
+
+}
+.vistas{
+    margin-top: 5%;
+    width: 230px;
+    height: 100px;
+    background-color: #F39C12;
+    color:white;
+    border-radius: 5px;
+    
+}
+.ganancias{
+    margin-top: 5%;
+    width: 230px;
+    height: 100px;
+    background-color: #00C0EF;
+    color:white;
+    border-radius: 5px;
+}
+.referidos{
+    margin-top: 5%;
+    width: 230px;
+    height: 100px;
+    background-color: #00A65A;
+    color:white;
+    border-radius: 5px;
+}
+.average{
+    margin-top: 5%;
+    width: 230px;
+    height: 100px;
+    background-color: #DD4B39;
+    color:white;
+    border-radius: 5px;
+}
+.esta{
+    transform: translateY(-45px);
+    margin-left: 60%;
+    font-size: 80px;
+    color: gray;
+    position: relative;
+}
+.contador{
+   font-size: 40px;
+}
+hr{
+    border:0;
+color: #3C8DBC;
+background-color: #3C8DBC;
+height: 5px;
+}
+.a{
+    transform: translateY(-90px);
+}
+.ab{
+    transform: translateY(-80px);
+}
+.anuncios{
+    background-color: white;
+}
