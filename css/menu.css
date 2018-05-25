@@ -103,6 +103,9 @@ main article p{
 }
 /* Mediaqueries */
 @media screen and (max-width: 705px){
+	.TextBanner{
+		display: none;
+	}
 	header .menu{
 		flex-direction: column;	
 	}

@@ -1,6 +1,4 @@
-
 .bannerad{
-    position: relative;
     display: inline-block;
     text-align: center;
 }
@@ -8,7 +6,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -300%);
     color: white;
 }
 .Contad{
@@ -22,4 +20,23 @@
 }
 .textn{
     font-weight:bold;
+}
+table {
+    font-family: arial, sans-serif;
+    /* border:none; */
+    border-collapse:collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.Pais{
+    width: 20px;
 }
