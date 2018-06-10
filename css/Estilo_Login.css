@@ -37,18 +37,11 @@ body{
 #registro input[type=text]:hover{
 	border:solid #000 2px;
 }
-#registro input[type=text]:focus{
-	border:solid #2DABE8 2px;
-}
-
 #registro input[type=password]{
 	padding-left:10px;
 }
 #registro input[type=password]:hover{
 	border:solid #000 2px;
-}
-#registro input[type=password]:focus{
-	border:solid #2DABE8 2px;
 }
 #registro input[type=checkbox]{
 	width:15px;
@@ -90,7 +83,4 @@ body{
 #registro a h3:hover{
 	color:#FFF;
 }
-.fa-user{
-	position: absolute;
-	padding-bottom: 80px;
-}
+
