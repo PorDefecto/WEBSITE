@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="css/dashboard.css">
 	<link rel="stylesheet" href="css/contenidodash.css">
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<meta charset="UTF-8">
 	<title>Dashboard</title>
 </head>
@@ -35,65 +36,69 @@
     </nav>
 </div>
 <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 50vh;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 0;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-<div id="map"></div>
- <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      var map, infoWindow;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 6
-        });
-        infoWindow = new google.maps.InfoWindow;
-
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
-
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
-
+body{
+		font-family: "Helvetica Neue", "Helvetica", Arial,Verdana, sans-serif;
+}
+#map_canvas{
+		width:100%;
+		height:400px;
+}
+</style>
+<section>
+		<article>
+				<div id="map_canvas"></div><!-- Esta capa hará de elemento contenedor del mapa -->
+		</article>
+</section>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script><!-- Cargamos la API de Google Maps -->
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script> -->
+<script type="text/javascript">
+var map;
+var latitud;
+var longitud;
+$(document).ready(function() {
+		localizame(); /*Cuando cargue la página, cargamos nuestraposición*/
+});
+function localizame() {
+		if (navigator.geolocation) { /* Si el navegador tienegeolocalizacion */
+				navigator.geolocation.getCurrentPosition(coordenadas,errores);
+		}
+		else{
+				alert('Oops! Tu navegador no soporta geolocalización.Bájate Chrome, que es gratis!');
+		}
+}
+function coordenadas(position) {
+		latitud = position.coords.latitude; /*Guardamos nuestra latitud*/
+		longitud = position.coords.longitude; /*Guardamos nuestra longitud*/
+		cargarMapa();
+}
+function errores(err) {
+		/*Controlamos los posibles errores */
+		if (err.code == 0) {
+				alert("Oops! Algo ha salido mal");
+		}
+		if (err.code == 1) {
+				alert("Oops! No has aceptado compartir tu posición");
+		}
+		if (err.code == 2) {
+				alert("Oops! No se puede obtener la posición actual");
+				}
+		if (err.code == 3) {
+				alert("Oops! Hemos superado el tiempo de espera");
+		}
+}
+function cargarMapa() {
+		var latlon = new google.maps.LatLng(latitud,longitud); /*Creamos un punto con nuestras coordenadas */
+		var myOptions = {zoom: 17,center: latlon, /* Definimos la posicion del mapa conel punto */mapTypeId: google.maps.MapTypeId.ROADMAP};/*Configuramos una serie de opciones como el zoom del mapa y el tipo.*/
+		map = new google.maps.Map($("#map_canvas").get(0),
+		myOptions); /*Creamos el mapa y lo situamos en su capa */
+		var coorMarcador = new google.maps.LatLng(latitud,longitud); /*Un nuevo punto con nuestrascoordenadas para el marcador (flecha) */
+		var marcador = new google.maps.Marker({
+				/*Creamos un marcador*/position: coorMarcador, /*Lo situamos en nuestro punto*/
+				map: map, /* Lo vinculamos a nuestro mapa */
+				title: "Dónde estoy?"
+		});
+}
+</script>
 <script src="js/fontawesome-all.js"></script>
 </body>
 </html>
