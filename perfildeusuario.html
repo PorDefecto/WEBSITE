@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="css/dashboard.css">
-	<link rel="stylesheet" href="css/contenidodash.css">
+	<link rel="stylesheet" type="text/css" href="css/perfil.css">
+	
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<meta charset="UTF-8">
 	<title>Dashboard</title>
 </head>
@@ -34,65 +36,17 @@
         </ul>
     </nav>
 </div>
-<style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 50vh;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 0;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-<div id="map"></div>
- <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      var map, infoWindow;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 6
-        });
-        infoWindow = new google.maps.InfoWindow;
+<section class="perfil">
+		<h1>DATOS GENERALES:</h1>
+		<br>
+		<h2>Usuario:</h1><input type="text"  class="usuario" name="" value="Jose pastor">
+		<h2>Correo:</h2><input type="text" name="password" class="usuario" value="josepastor@gmail.com">
+		<h2>Dirección:</h2><input type="text" name="direccion" class="usuario" value="Av leoncio prado 544">
+		<h2>Telefono:</h2><input type="text" name="telefono" class="usuario" value="Av leoncio prado 544">	
+		<h2>Pais:</h2><input type="text" name="pais" class="usuario" value="Peru">
+		<h2>Provincia:</h2><input type="text" name="provincia" class="usuario" value="Tacna">	
 
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
-
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script>
+</section>
 
 <script src="js/fontawesome-all.js"></script>
 </body>

@@ -5,31 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Nueva Cuenta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/Estilo_Creacion.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/newcount.css" />
     <script src="js/acceso2.js"></script>
 </head>
 <body>
-    <div id="contenedor">
-        <form method="post" onsubmit="return validacion()">
-            <h1>Crear una cuenta</h1>
-            <br>
-            <p>Nombre</p>
-            <input type="text" name="name" id="name" placeholder="Nombre">
-            <input type="text" name="lastname" id="lastname" placeholder="Apellido"><br>
-            <p>Correo</p>
-            <input type="text" name="email" id="email" placeholder="Correo">
-            <select name="email2" id="email2">
-                <option>@gmail.com</option>
-                <option>@hotmail.com</option>
-                <option>@yahoo.com</option>
-            </select><br>
-            <p>Crear un Usuario</p>
-            <input type="text" name="username" id="username" placeholder="Usuario"><br>
-            <p>Crear una Contraseña</p>
-            <input type="password" name="password" id="password" placeholder="Contraseña"><br>
-            <input type="password" name="password2" id="password2" placeholder="Repetir Contraseña"><br>
-            <input type="submit" name="Send" id="submit" value="Confirmar"><br/>
-        </form>
-    </div>
+  <form action="/action_page.php">
+  <div class="container">
+    <h1>Registro</h1>
+    <p>Por favor rellene este formulario para crear una cuenta.</p>
+    <hr>
+
+    <label for="email"><b>Correo</b></label>
+    <input type="text" placeholder="Ingresar correo" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Ingresar password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repetir password</b></label>
+    <input type="password" placeholder="Repetir password" name="psw-repeat" required>
+    <hr>
+    <p>Al crear una cuenta, acepta nuestro <a href="#">Términos y Privacidad</a>.</p>
+
+    <button type="submit" class="registerbtn">Registro</button>
+  </div>
+  
+  <div class="container signin">
+    <p>¿Ya tienes una cuenta? <a href="#">Registrarse</a>.</p>
+  </div>
+</form>
 </body>
 </html>
