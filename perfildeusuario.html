@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="css/dashboard.css">
-	<link rel="stylesheet" href="css/contenidodash.css">
+	<link rel="stylesheet" type="text/css" href="css/perfil.css">
+	
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<meta charset="UTF-8">
@@ -35,70 +36,18 @@
         </ul>
     </nav>
 </div>
-<style>
-body{
-		font-family: "Helvetica Neue", "Helvetica", Arial,Verdana, sans-serif;
-}
-#map_canvas{
-		width:100%;
-		height:400px;
-}
-</style>
-<section>
-		<article>
-				<div id="map_canvas"></div><!-- Esta capa hará de elemento contenedor del mapa -->
-		</article>
+<section class="perfil">
+		<h1>DATOS GENERALES:</h1>
+		<br>
+		<h2>Usuario:</h1><input type="text"  class="usuario" name="" value="Jose pastor">
+		<h2>Correo:</h2><input type="text" name="password" class="usuario" value="josepastor@gmail.com">
+		<h2>Dirección:</h2><input type="text" name="direccion" class="usuario" value="Av leoncio prado 544">
+		<h2>Telefono:</h2><input type="text" name="telefono" class="usuario" value="Av leoncio prado 544">	
+		<h2>Pais:</h2><input type="text" name="pais" class="usuario" value="Peru">
+		<h2>Provincia:</h2><input type="text" name="provincia" class="usuario" value="Tacna">	
+
 </section>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script><!-- Cargamos la API de Google Maps -->
-<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script> -->
-<script type="text/javascript">
-var map;
-var latitud;
-var longitud;
-$(document).ready(function() {
-		localizame(); /*Cuando cargue la página, cargamos nuestraposición*/
-});
-function localizame() {
-		if (navigator.geolocation) { /* Si el navegador tienegeolocalizacion */
-				navigator.geolocation.getCurrentPosition(coordenadas,errores);
-		}
-		else{
-				alert('Oops! Tu navegador no soporta geolocalización.Bájate Chrome, que es gratis!');
-		}
-}
-function coordenadas(position) {
-		latitud = position.coords.latitude; /*Guardamos nuestra latitud*/
-		longitud = position.coords.longitude; /*Guardamos nuestra longitud*/
-		cargarMapa();
-}
-function errores(err) {
-		/*Controlamos los posibles errores */
-		if (err.code == 0) {
-				alert("Oops! Algo ha salido mal");
-		}
-		if (err.code == 1) {
-				alert("Oops! No has aceptado compartir tu posición");
-		}
-		if (err.code == 2) {
-				alert("Oops! No se puede obtener la posición actual");
-				}
-		if (err.code == 3) {
-				alert("Oops! Hemos superado el tiempo de espera");
-		}
-}
-function cargarMapa() {
-		var latlon = new google.maps.LatLng(latitud,longitud); /*Creamos un punto con nuestras coordenadas */
-		var myOptions = {zoom: 17,center: latlon, /* Definimos la posicion del mapa conel punto */mapTypeId: google.maps.MapTypeId.ROADMAP};/*Configuramos una serie de opciones como el zoom del mapa y el tipo.*/
-		map = new google.maps.Map($("#map_canvas").get(0),
-		myOptions); /*Creamos el mapa y lo situamos en su capa */
-		var coorMarcador = new google.maps.LatLng(latitud,longitud); /*Un nuevo punto con nuestrascoordenadas para el marcador (flecha) */
-		var marcador = new google.maps.Marker({
-				/*Creamos un marcador*/position: coorMarcador, /*Lo situamos en nuestro punto*/
-				map: map, /* Lo vinculamos a nuestro mapa */
-				title: "Dónde estoy?"
-		});
-}
-</script>
+
 <script src="js/fontawesome-all.js"></script>
 </body>
 </html>
